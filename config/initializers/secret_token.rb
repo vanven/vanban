@@ -9,4 +9,20 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Vanban::Application.config.secret_key_base = 'fae2f14c401a4a0686ac15ff6bae3013f751af180b9dfc97bea879951e8f594119ebd8a06b99faef08889e138ac77eaf44eba5e611001ba6cda4ddc355bc882f'
+
+require 'securerandom'
+
+def secure_token
+  token_file = Rails.root.join('.secret')
+  if File.exist?(token_file)
+    # Use the existing token.
+    File.read(token_file).chomp
+  else
+    # Generate a new token and store it in token_file.
+    token = SecureRandom.hex(64)
+    File.write(token_file, token)
+    token
+  end
+end
+
+SampleApp::Application.config.secret_key_base = secure_token
