@@ -4,4 +4,5 @@ class User
   key :name, String
   key :email, String
 
+  many :identities
 end
