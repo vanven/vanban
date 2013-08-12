@@ -91,6 +91,8 @@ GEM
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
       rb-kqueue (>= 0.2)
+    lolize (0.0.3)
+      paint (~> 0.8.3)
     lumberjack (1.0.4)
     mail (2.5.4)
       mime-types (~> 1.16)
@@ -107,6 +109,7 @@ GEM
     omniauth (1.1.4)
       hashie (>= 1.2, < 3)
       rack
+    paint (0.8.6)
     plucky (0.6.5)
       mongo (~> 1.5)
     polyglot (0.3.3)
@@ -201,6 +204,7 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   jquery-ui-rails (~> 4.0.4)
+  lolize
   mongo_mapper!
   omniauth (~> 1.1.4)
   rails (= 4.0.0)
