@@ -5,9 +5,9 @@ gem 'rails', '4.0.0'
 
 gem 'mongo_mapper', github: 'jnunemaker/mongomapper', ref: 'e0d7db141b2c330eb44773ef00d1b179bbdf9209'
 gem 'bson_ext'
+gem "seed_dump", "~> 0.6.0"
 
 gem "omniauth", "~> 1.1.4"
-gem "seed_dump", "~> 0.6.0"
 
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
