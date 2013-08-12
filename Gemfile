@@ -8,7 +8,7 @@ gem 'bson_ext'
 gem "seed_dump", "~> 0.6.0"
 
 gem "omniauth", "~> 1.1.4"
-gem "omniauth-google-oauth2"
+gem "omniauth-google-oauth2", :git => 'git@github.com:zquestz/omniauth-google-oauth2.git'
 
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
@@ -26,7 +26,7 @@ group :development, :test do
   gem 'capybara'
   gem 'guard-rspec'
   gem 'growl_notify'
-
+  gem 'lolize', :require => 'lolize/auto'
 end
 
 group :doc do

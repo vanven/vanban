@@ -1,7 +1,9 @@
 Vanban::Application.routes.draw do
 
-  match '/auth/:provider/callback', to: 'sessions#create'
-  match '/logout', to: 'sessions#destroy'
+  resources :kanbans
+
+  get '/auth/:provider/callback', to: 'sessions#create'
+  get '/logout', to: 'sessions#destroy'
 
   get '/auth/failure' do
     flash[:notice] = params[:message] # if using sinatra-flash or rack-flash
