@@ -8,6 +8,7 @@ gem 'bson_ext'
 gem "seed_dump", "~> 0.6.0"
 
 gem "omniauth", "~> 1.1.4"
+gem "omniauth-google-oauth2"
 
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
