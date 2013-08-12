@@ -6,7 +6,8 @@ gem 'rails', '4.0.0'
 gem 'mongo_mapper', github: 'jnunemaker/mongomapper', ref: 'e0d7db141b2c330eb44773ef00d1b179bbdf9209'
 gem 'bson_ext'
 
-gem 'oauth'
+gem "omniauth", "~> 1.1.4"
+gem "seed_dump", "~> 0.6.0"
 
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
@@ -18,6 +19,14 @@ gem 'jquery-rails'
 gem "jquery-ui-rails", "~>4.0.4"
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'guard-rspec'
+  gem 'growl_notify'
+
+end
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

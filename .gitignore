@@ -14,4 +14,13 @@ capybara-*.html
 **.orig
 rerun.txt
 pickle-email-*.html
+
+doc/
+*.swp
+*~
+.project
+.DS_Store
+.idea
+.secret
+
 /config/mongo.yml
