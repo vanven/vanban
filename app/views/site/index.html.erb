@@ -1,17 +1,23 @@
-<div class="transparent">
-  <div id="signin">
-    <h1>Welcome to vanBAN!</h1>
-    <h3>Your personal kanban system.</h3>
 
-    <p>Please sign in below!</p>
+<div class="header"><a class="logo"><span>van</span>BAN</a></div>
 
-    <p>** Enter OAuth crap here. **</p>
-    <span><%= link_to image_tag("google_32.png", alt: "Google"), '/auth/google_oauth2' %></span>
-    <span><%= link_to image_tag("facebook_32.png", alt: "Facebook"), '#' %></span>
-    <span><%= link_to image_tag("twitter_32.png", alt: "Twitter"), '#' %></span>
+  <div class="transparent">
+    <div id="signin">
+      <h1>Welcome to vanBAN!</h1>
+      <h3>Your personal kanban system.</h3>
+
+      <p>Please sign in below!</p>
+
+      <p>** Enter OAuth crap here. **</p>
+      <span><%= link_to image_tag("google_32.png", alt: "Google"), '/auth/google_oauth2' %></span>
+      <span><%= link_to image_tag("facebook_32.png", alt: "Facebook"), '/auth/facebook' %></span>
+      <span><%= link_to image_tag("twitter_32.png", alt: "Twitter"), '/auth/twitter' %></span>
+    </div>
   </div>
-</div>
 
-<div class="footer_links">
-  <a href="/terms">Terms</a>
+<div class="footer">
+  <span>
+    <a href="/privacy">Privacy</a>
+    <a href="/terms">Terms</a>
+  </span>
 </div>

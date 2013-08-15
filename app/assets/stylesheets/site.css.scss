@@ -1,38 +1,79 @@
-// Place all the styles related to the Site controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
 
-@import url(http://fonts.googleapis.com/css?family=Londrina+Sketch);
+@import 'variables';
 
-body {
-  background-image: url('vanban_bg.jpg');
-  background-color: #252525;
-  background-size:  cover;
+html {
+  position: relative;
+  min-height: 100%;
 }
 
-#signin {
-  background-color: rgb(255,255,255);
-  opacity:0.85;
-  border-radius: 10px;
+body {
+  background-image: url('background.jpg');
+  background-color: $color-dark;
+  background-size:  100%;
+  margin: 0 0 40px;    /* bottom = footer height */
+  padding: 0;
+  height: 100%;
+  width: 100%
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  background: $color-dark;
+  text-align: right;
+  min-width: 100%;
+}
+
+.logo {
+  font-family: $font-google;
+  font-size: 35px;
+  color: $color-light;
+  margin-right: 10px;
+}
+
+.logo a:hover span, .logo a:focus span {
+  text-shadow: 0 0 7px white;
+}
+
+.transparent {
+  background-color: $color-light-trans;
+  border-radius: $b-rad;
   padding: 10px 10px;
   width: 400px;
   height: auto;
   position: absolute;
   left: 50%;
   top: 50%;
-  margin:-150px 0 0 -200px;
-  font-family: sans-serif;
+  margin: -140px 0 0 -210px;
+}
+
+#signin {
+  font-family: $font-sans;
   text-align: center;
+  z-index: 2;
 }
 
 #signin h1 {
-    font-family: 'Londrina Sketch', cursive;
-    font-size: 45px;
-
+  font-family: $font-google;
+  font-size: 45px;
 }
 
-.footer_links {
-bottom: 0;
-left: 0;
-font-family: sans-serif;
+.footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  height: 40px;
+  line-height: 40px;
+  background: $color-dark;
+  vertical-align: center;
+  z-index: 3;
+}
+
+.footer span {
+  font-family: $font-sans;
+  margin-left: 10px;
 }
