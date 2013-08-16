@@ -5,8 +5,12 @@ Vanban::Application.routes.draw do
   get "privacy" => "site#privacy"
   get "terms" => "site#terms"
 
-  resources :kanbans
+  resources :users do
+    resources :kanbans
+  end
+
   get 'dashboard' => 'kanbans#show'
+
 
   get 'auth/:provider/callback', to: 'sessions#create'
   get 'auth/failure', to: redirect('/')
