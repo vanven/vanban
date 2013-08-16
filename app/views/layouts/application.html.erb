@@ -8,6 +8,19 @@
 </head>
 <body>
 
+<% if current_user %>
+  <div class="header">
+  Signed in as <%= current_user.name %>!
+  <%= link_to "Sign out", signout_path %>&nbsp;
+  <a class="logo"><span>van</span>BAN</a>
+  </div>
+<% else %>
+  <div class="header">
+  <%= link_to "Sign in with Google", "/auth/google_oauth2" %>&nbsp;
+  <a class="logo"><span>van</span>BAN</a>
+  </div>
+<% end %>
+
 <%= yield %>
 
 </body>

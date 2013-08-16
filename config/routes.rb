@@ -1,20 +1,20 @@
 Vanban::Application.routes.draw do
-
-  resources :kanbans
-
-  get '/auth/:provider/callback', to: 'sessions#create'
-  get '/logout', to: 'sessions#destroy'
-
-  get '/auth/failure' do
-    flash[:notice] = params[:message] # if using sinatra-flash or rack-flash
-    redirect '/'
-  end
-
   # You can have the root of your site routed with "root"
   root 'site#index'
 
   get "privacy" => "site#privacy"
   get "terms" => "site#terms"
+
+  resources :kanbans
+  get 'dashboard' => 'kanbans#show'
+
+  get 'auth/:provider/callback', to: 'sessions#create'
+  get 'auth/failure', to: redirect('/')
+  get 'signout', to: 'sessions#destroy', as: 'signout'
+
+
+
+
 
 
 end
