@@ -1,0 +1,12 @@
+<div class="transparent">
+  <div id="user_list">
+    <h1>List of users</h1>
+
+    <% @users.each do |user| %>
+      <p>
+        ID: <%= link_to user._id, user_path(user) %><br />
+        Name: <%= user.name %><br />
+      </p>
+    <% end %>
+  </div>
+</div>
