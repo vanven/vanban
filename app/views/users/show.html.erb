@@ -1,0 +1,11 @@
+<div class="transparent">
+  <div id="user_list">
+    <h1>Hello, <%= @user.name %>!</h1>
+
+    <p>
+      Name: <%= @user.name %><br />
+      ID: <%= link_to @user._id, user_path(@user) %><br />
+      <%= link_to "Kanbans", user_kanbans_path(@user) %>
+    </p>
+  </div>
+</div>
