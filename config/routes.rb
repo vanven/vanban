@@ -6,9 +6,7 @@ Vanban::Application.routes.draw do
   get "terms" => "site#terms"
 
   resources :users do
-    resources :kanbans do
-      resources :blocks
-    end
+    resources :kanbans
   end
 
   resources :blocks

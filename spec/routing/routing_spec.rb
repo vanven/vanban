@@ -33,23 +33,28 @@ describe 'application routing' do
     )
   end
 
-  it 'routes /users/:user_id/kanbans/:kanban_id/blocks to blocks#index' do
-    expect(get: '/users/999/kanbans/111/blocks').to route_to(
-      controller: 'blocks',
-      action: 'index',
-      user_id: '999',
-      kanban_id: '111'
-    )
-  end
+  # According to this best practices article:
+  # http://weblog.jamisbuck.org/2007/2/5/nesting-resources
+  # Resources should never be nested more than one level deep!
 
-  it 'routes /users/:user_id/kanbans/:kanban_id/blocks/:id to blocks#show' do
-    expect(get: 'users/999/kanbans/111/blocks/888').to route_to(
-      controller: 'blocks',
-      action: 'show',
-      user_id: '999',
-      kanban_id: '111',
-      id: '888'
-    )
-  end
+
+  # it 'routes /users/:user_id/kanbans/:kanban_id/blocks to blocks#index' do
+  #   expect(get: '/users/999/kanbans/111/blocks').to route_to(
+  #     controller: 'blocks',
+  #     action: 'index',
+  #     user_id: '999',
+  #     kanban_id: '111'
+  #   )
+  # end
+
+  # it 'routes /users/:user_id/kanbans/:kanban_id/blocks/:id to blocks#show' do
+  #   expect(get: 'users/999/kanbans/111/blocks/888').to route_to(
+  #     controller: 'blocks',
+  #     action: 'show',
+  #     user_id: '999',
+  #     kanban_id: '111',
+  #     id: '888'
+  #   )
+  # end
 
 end
