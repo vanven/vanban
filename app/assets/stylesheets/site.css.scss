@@ -4,6 +4,7 @@
 html {
   position: relative;
   min-height: 100%;
+  height: 100%;
 }
 
 body {
@@ -13,7 +14,7 @@ body {
   margin: 0 0 40px;    /* bottom = footer height */
   padding: 0;
   height: 100%;
-  width: 100%
+  width: 100%;
 }
 
 a {
@@ -40,8 +41,8 @@ a {
 .transparent {
   background-color: $color-light-trans;
   border-radius: $b-rad;
-  padding: 10px 10px;
-  width: 400px;
+  padding: 10px 20px;
+  width: auto;
   height: auto;
   position: absolute;
   left: 50%;

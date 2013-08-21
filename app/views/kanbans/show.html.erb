@@ -1,55 +1,84 @@
-
-  <section class="kanban">
-    <div class="kanban-panels">
-      <div class="panel" id="to-do">
+<div class="header"><%= @kanban.board_name %></div>
+    <div class="kanban-panels clearfix">
+      <div class="panel">
         <header class="panel_header">
           <h3>TO DO</h3>
+          <span class="add" id="add_todo">+</span>
         </header>
-        <section class="block_list">
-          <div class="block" draggable="true">.</div>
-          <div class="block" draggable="true">.</div>
-          <div class="block" draggable="true">.</div>
+        <section class="block_list clearfix">
+
+          <div class="column" id="to-do">
+            <div class="portlet">
+              <div class="portlet-header">Feeds</div>
+              <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+            </div>
+
+            <div class="portlet">
+              <div class="portlet-header">News</div>
+              <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+            </div>
+          </div>
+
         </section>
       </div>
-      <div class="panel" id="today">
+      <div class="panel">
         <header class="panel_header">
           <h3>TODAY</h3>
+          <span class="add" id="add_today">+</span>
         </header>
-        <section class="block_list">
-          <div class="block" draggable="true">.</div>
-          <div class="block" draggable="true">.</div>
-          <div class="block" draggable="true">.</div>
-          <div class="block" draggable="true">.</div>
+        <section class="block_list clearfix">
+          <div class="column" id="today">
+            <div class="portlet">
+              <div class="portlet-header">Shopping</div>
+              <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+            </div>
+
+            <div class="portlet">
+              <div class="portlet-header">Links</div>
+              <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+            </div>
+          </div>
         </section>
       </div>
-      <div class="panel" id="wip">
+      <div class="panel">
         <header class="panel_header">
           <h3>WIP</h3>
+          <span class="add" id="add_wip">+</span>
         </header>
-        <section class="block_list">
-          <div class="block" draggable="true">.</div>
-          <div class="block" draggable="true">.</div>
-          <div class="block" draggable="true">.</div>
-          <div class="block" draggable="true">.</div>
+        <section class="block_list clearfix">
+          <div class="column" id="wip">
+            <div class="portlet">
+              <div class="portlet-header">Images</div>
+              <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+            </div>
+
+            <div class="portlet">
+              <div class="portlet-header">Facebook</div>
+              <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+            </div>
+          </div>
         </section>
       </div>
-      <div class="panel" id="done">
+      <div class="panel">
         <header class="panel_header">
           <h3>DONE</h3>
+          <span class="add" id="add_done">+</span>
         </header>
-        <section class="block_list" dropzone="move " ondrop="receive(event, this)">
-          <div class="block" draggable="true">.</div>
-          <div class="block" draggable="true">.</div>
-          <div class="block" draggable="true">.</div>
-          <div class="block" draggable="true">.</div>
+        <section class="block_list">
+          <div class="column" id="done">
+            <div class="portlet">
+              <div class="portlet-header">Twitter</div>
+              <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+            </div>
+
+            <div class="portlet">
+              <div class="portlet-header">Tumblr</div>
+              <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+            </div>
+          </div>
         </section>
       </div>
 
-
-
     </div>
-  </section>
 
-  <div class="footer">
 
-  </div>

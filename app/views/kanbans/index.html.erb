@@ -1,0 +1,21 @@
+<div class="transparent">
+  <div id="index_list">
+
+    <h2>List of kanbans for <%= @user.name %></h2>
+
+    blah blah blah
+    <% @user.kanbans.each do |kanban| %>
+      <p>
+        Kanban Name: <%= kanban.board_name %><br />
+        <%= link_to kanban._id, user_kanban_path(@user, kanban) %>
+        <% # flea.cat could also have been @cat, per Tim %>
+      </p>
+    <% end %>
+    <p>
+      <strong>
+        <%= link_to "+ Add a new Kanban!", new_user_kanban_path(@user) %>
+      </strong>
+    </p>
+
+  </div>
+</div>

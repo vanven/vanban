@@ -1,0 +1,16 @@
+<div class="transparent">
+  <div id="index_list">
+
+    <h1>Create a new kanban</h1>
+
+    <%= form_for [@user, @kanban] do |f| %>
+      <p>
+        <%= f.label :board_name %>
+        <%= f.text_field :board_name %>
+      </p>
+      <p>
+        <%= f.submit %>
+      </p>
+    <% end %>
+  </div>
+</div>
