@@ -1,0 +1,61 @@
+<div class="header"><%= @kanban.board_name %></div>
+  <section class="kanban">
+    <div class="kanban-panels">
+      <div class="panel">
+        <header class="panel_header">
+          <h3>TO DO</h3>
+        </header>
+        <section class="block_list">
+          <div id="to-do" ondrop="dropBlock(this, event)" ondragenter="return false" ondragover="return false">
+            <div class="block" draggable="true">.</div>
+            <div class="block" draggable="true">.</div>
+            <div class="block" draggable="true">.</div>
+          </div>
+        </section>
+      </div>
+      <div class="panel">
+        <header class="panel_header">
+          <h3>TODAY</h3>
+        </header>
+        <section class="block_list">
+          <div id="today" ondrop="dropBlock(this, event)" ondragenter="return false" ondragover="return false">
+            <div class="block" id="block1" draggable="true" ondragstart="dragBlock(this, event)">Block 1</div>
+            <div class="block" draggable="true" ondragstart="dragBlock(this, event)">.</div>
+            <div class="block" draggable="true" ondragstart="dragBlock(this, event)">.</div>
+            <div class="block" draggable="true" ondragstart="dragBlock(this, event)">.</div>
+          </div>
+        </section>
+      </div>
+      <div class="panel">
+        <header class="panel_header">
+          <h3>WIP</h3>
+        </header>
+        <section class="block_list">
+          <div id="wip" ondrop="dropBlock(this, event)" ondragenter="return false" ondragover="return false">
+            <div class="block" draggable="true" ondragstart="dragBlock(this, event)">.</div>
+            <div class="block" draggable="true" ondragstart="dragBlock(this, event)">.</div>
+            <div class="block" draggable="true" ondragstart="dragBlock(this, event)">.</div>
+            <div class="block" draggable="true" ondragstart="dragBlock(this, event)">.</div>
+          </div>
+        </section>
+      </div>
+      <div class="panel">
+        <header class="panel_header">
+          <h3>DONE</h3>
+        </header>
+        <section class="block_list">
+          <div id="done" ondrop="dropBlock(this, event)" ondragenter="return false" ondragover="return false">
+            <div class="block" draggable="true">.</div>
+            <div class="block" draggable="true">.</div>
+            <div class="block" draggable="true">.</div>
+            <div class="block" draggable="true">.</div>
+          </div>
+        </section>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="footer">
+
+  </div>

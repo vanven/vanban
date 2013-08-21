@@ -4,4 +4,6 @@ class Block
   key :title, String
   key :description, String
 
+  embedded_in :kanban
+
 end
