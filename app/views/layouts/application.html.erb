@@ -3,7 +3,6 @@
 <head>
   <title>Vanban</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -21,7 +20,24 @@
   </div>
 <% end %>
 
+<% if flash[:notice] %>
+    <div class="message notice"><%= flash[:notice] %></div>
+  <% end %>
+
+  <% if flash[:error] %>
+    <div class="message error"><%= flash[:error] %></div>
+  <% end %>
+
 <%= yield %>
+
+<div class="footer">
+  <span>
+    <a href="/privacy">Privacy</a>
+    <a href="/terms">Terms</a>
+  </span>
+</div>
+
+<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 
 </body>
 </html>

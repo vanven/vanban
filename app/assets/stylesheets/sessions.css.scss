@@ -1,3 +1,19 @@
-// Place all the styles related to the Sessions controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.message {
+  z-index: 50;
+  width: 50%;
+  position: relative;
+  top: 5px;
+  color: white;
+  font-size: 18px;
+  margin: 0 auto;
+  padding: 15px;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.notice {
+  background: rgba(0, 100, 0, .75);
+}
+.error {
+  background: rgba(255, 0, 0, .75);
+}

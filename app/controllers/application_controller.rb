@@ -10,4 +10,8 @@ class ApplicationController < ActionController::Base
   end
   helper_method :current_user
 
+  def is_authenticated
+    redirect_to root_url unless current_user
+  end
+
 end
