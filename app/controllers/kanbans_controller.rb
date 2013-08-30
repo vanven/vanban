@@ -1,5 +1,5 @@
 class KanbansController < ApplicationController
-  # before_action :is_authenticated
+  before_action :is_authenticated
   before_action :get_user
 
   def index
@@ -22,7 +22,8 @@ class KanbansController < ApplicationController
 
   def create
     if @user
-      @kanban = @user.kanban.create!(kanban_params)
+      @kanban = @user.kanbans.create!(kanban_params)
+      redirect_to user_kanbans_path, notice: ' Your new vanBAN was successfully created.'
     end
   end
 

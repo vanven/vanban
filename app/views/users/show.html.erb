@@ -5,7 +5,10 @@
     <p>
       Name: <%= @user.name %><br />
       ID: <%= link_to @user._id, user_path(@user) %><br />
-      <%= link_to "Kanbans", user_kanbans_path(@user) %>
+      email: <%= @user.email %>
+    </p>
+    <p>
+      <%= link_to "Your vanBANs", user_kanbans_path(@user) %>
     </p>
   </div>
 </div>

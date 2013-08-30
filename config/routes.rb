@@ -11,7 +11,7 @@ Vanban::Application.routes.draw do
 
   resources :blocks
 
-  get 'dashboard' => 'kanbans#show'
+  get 'dashboard' => 'users#index'
 
 
   get 'auth/:provider/callback', to: 'sessions#create'

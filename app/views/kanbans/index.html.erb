@@ -1,19 +1,20 @@
 <div class="transparent">
   <div id="index_list">
 
-    <h2>List of kanbans for <%= @user.name %></h2>
+    <h1>List of vanBANS for <%= @user.name %></h1>
 
-    blah blah blah
+    <ul>
     <% @user.kanbans.each do |kanban| %>
-      <p>
-        Kanban Name: <%= kanban.board_name %><br />
-        <%= link_to kanban._id, user_kanban_path(@user, kanban) %>
+      <li>
+
+        <%= link_to kanban.board_name, user_kanban_path(@user, kanban) %>
         <% # flea.cat could also have been @cat, per Tim %>
-      </p>
+      </li>
     <% end %>
+    </ul>
     <p>
       <strong>
-        <%= link_to "+ Add a new Kanban!", new_user_kanban_path(@user) %>
+        <%= link_to "+ Add a new vanBAN!", new_user_kanban_path(@user) %>
       </strong>
     </p>
 
