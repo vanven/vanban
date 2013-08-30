@@ -8,23 +8,46 @@ html {
 }
 
 body {
-  background-image: url('background.jpg');
+  background-image: url(escheresque_ste.png);
   background-color: $color-dark;
-  background-size:  100%;
-  margin: 0 0 40px;    /* bottom = footer height */
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-position: 0% 80%;
+  background-size: auto;
+  margin: 0 0 0 0;    /* bottom = footer height */
   padding: 0;
   height: 100%;
-  width: 100%;
 }
 
 a {
   text-decoration: none;
 }
 
+a:link {
+ color: rgba(200,30,0,1);
+}
+
+a:visited {
+ color: rgba(200,30,0,1);
+}
+
+a:hover, a:focus {
+text-decoration: none;
+}
+
+a:active {
+ font-weight: bold;
+}
+
 .header {
   background: $color-dark;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
   text-align: right;
   min-width: 100%;
+  z-index: 10;
 }
 
 .logo {
@@ -42,7 +65,7 @@ a {
   background-color: $color-light-trans;
   border-radius: $b-rad;
   padding: 10px 20px;
-  width: auto;
+  width: 420px;
   height: auto;
   position: absolute;
   left: 50%;
@@ -58,7 +81,8 @@ a {
 
 #signin h1 {
   font-family: $font-google;
-  font-size: 45px;
+  font-weight: bold;
+  font-size: 50px;
 }
 
 .footer {

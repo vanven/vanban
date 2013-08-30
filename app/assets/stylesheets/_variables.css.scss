@@ -1,16 +1,17 @@
 
 @import url(http://fonts.googleapis.com/css?family=Londrina+Sketch);
+@import url(http://fonts.googleapis.com/css?family=Londrina+Shadow);
 
 // Palette
-$color-light: rgba(255,255,255,1);
-$color-light-trans: rgba(255,255,255,0.85);
-$color-dark: rgba(17,17,17,1);
-$color-dark-trans: rgba(17,17,17,0.85);
+  $color-light: rgba(255,255,255,1);
+  $color-light-trans: rgba(255,255,255,0.65);
+  $color-dark: rgba(17,17,17,1);
+  $color-dark-trans: rgba(17,17,17,0.85);
 
 // Typography
-$font-google: 'Londrina Sketch', cursive;
-$font-sans: 'Tahoma', sans-serif;
-$font-serif: serif;
+  $font-google: 'Londrina Shadow', cursive;
+  $font-sans: 'Optima', sans-serif;
+  $font-serif: serif;
 
 // Structural Style
-$b-rad: 10px;
+  $b-rad: 10px;
